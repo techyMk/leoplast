@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leoplast | Premium Polymer & Plumbing Solutions</title>
+    <meta name="description"
+        content="Leoplast — Leading manufacturer of premium PVC, uPVC, cPVC, HDPE pipes, water storage tanks, bath fittings and roofing solutions. ISO 9001:2015, ISI Certified. Tamil Nadu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./leoplast.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body style="font-family:'Outfit',sans-serif;background:#f9fafb;color:#111827;overflow-x:hidden;">
+
+    <!-- ============================
+     ANIMATED LOADER
+     ============================ -->
+    <div id="loader" style="background:#f8faff; z-index: 99999; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; position: fixed; inset: 0;">
+    <div class="loader-scene">
+        <div class="circle-lines out"></div>
+        <div class="circle-lines in"></div>
+        <img src="assets/logo.webp" class="loader-logo" alt="Leoplast">
+    </div>
+    <div class="dot-loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+
+    <!-- ============================
+     NAVIGATION
+     ============================ -->
+    <nav id="navbar"
+        style="position:fixed;top:0;width:100%;z-index:1000;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;color:white;">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo-light.webp" alt="Leoplast" class="nav-logo logo-light">
+            <img src="assets/logo-dark.webp" alt="Leoplast" class="nav-logo logo-dark">
+        </a>
+        <div style="display:flex;gap:2rem;align-items:center;" class="desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="roofing.html" class="nav-link">Roofing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <button id="menu-btn" class="nav-mobile-btn" aria-label="Open menu" aria-expanded="false"><svg
+                xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg></button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="roofing.html" class="nav-link">Roofing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+    </div>
+
+    <!-- ============================
+     HERO SLIDESHOW
+     ============================ -->
+    <header class="hero-slider" id="hero">
+
+        <!-- Slide 1: Water Storage Tanks -->
+        <div class="slide active">
+            <div class="slide-bg" style="background:linear-gradient(135deg,#0c1f3f 0%,#0f2a55 50%,#1a3a6e 100%);">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(37,99,235,0.18),transparent 65%);">
+                </div>
+            </div>
+            <div class="slide-content">
+                <span class="slide-badge">🏆 #1 in Tamil Nadu</span>
+                <div class="slide-icon">🛢️</div>
+                <h1 class="slide-title">Water Storage <span>Tanks</span></h1>
+                <p class="slide-subtitle">Anti-bacterial protection, unique threaded lid design.<br>200,000+ tanks
+                    produced annually — Purity you can trust.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="water-storage-tanks.html"
+                        style="padding:0.875rem 2rem;background:white;color:#0c1f3f;border-radius:9999px;font-weight:700;text-decoration:none;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.2);">Explore
+                        Tanks</a>
+                    <a href="products.html"
+                        style="padding:0.875rem 2rem;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);border-radius:9999px;font-weight:600;text-decoration:none;backdrop-filter:blur(6px);">All
+                        Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: PVC / uPVC / cPVC Pipes -->
+        <div class="slide">
+            <div class="slide-bg" style="background:linear-gradient(135deg,#0a1e3c 0%,#0d2248 50%,#112f66 100%);">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(59,127,232,0.2),transparent 65%);">
+                </div>
+            </div>
+            <div class="slide-content">
+                <span class="slide-badge">✅ ISI & ISO Certified</span>
+                <div class="slide-icon">🔧</div>
+                <h1 class="slide-title">Plumbing <span>Pipe Systems</span></h1>
+                <p class="slide-subtitle">PVC · rPVC · cPVC · uPVC — Complete plumbing solutions.<br>Lead-free,
+                    food-grade, built for every application.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="pvc-fittings.html"
+                        style="padding:0.875rem 2rem;background:white;color:#0c1f3f;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.2);">View
+                        Pipes</a>
+                    <a href="products.html"
+                        style="padding:0.875rem 2rem;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);border-radius:9999px;font-weight:600;text-decoration:none;backdrop-filter:blur(6px);">All
+                        Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Bath Fittings -->
+        <div class="slide">
+            <div class="slide-bg" style="background:linear-gradient(135deg,#0f2044 0%,#152a5a 50%,#1c3870 100%);">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(30,77,140,0.25),transparent 60%);">
+                </div>
+            </div>
+            <div class="slide-content">
+                <span class="slide-badge">💎 M-Series & Edge Series</span>
+                <div class="slide-icon">🚿</div>
+                <h1 class="slide-title">Premium <span>Bath Fittings</span></h1>
+                <p class="slide-subtitle">Elegant designs meeting robust durability.<br>M-Series and Edge Series —
+                    crafted for modern living.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="bath-fittings.html"
+                        style="padding:0.875rem 2rem;background:white;color:#0c1f3f;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.2);">View
+                        Fittings</a>
+                    <a href="products.html"
+                        style="padding:0.875rem 2rem;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);border-radius:9999px;font-weight:600;text-decoration:none;backdrop-filter:blur(6px);">All
+                        Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: HDPE Irrigation -->
+        <div class="slide">
+            <div class="slide-bg" style="background:linear-gradient(135deg,#0b1e3a 0%,#0e2750 50%,#163565 100%);">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 40% 55%,rgba(22,53,101,0.3),transparent 60%);">
+                </div>
+            </div>
+            <div class="slide-content">
+                <span class="slide-badge">🌾 Agricultural Solutions</span>
+                <div class="slide-icon">🌿</div>
+                <h1 class="slide-title">HDPE <span>Irrigation Systems</span></h1>
+                <p class="slide-subtitle">PE 63 & PE 80 grade pipes for agriculture.<br>Chemical resistant,
+                    eco-friendly, UV weatherproof.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="hdpe-system.html"
+                        style="padding:0.875rem 2rem;background:white;color:#0c1f3f;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.2);">Learn
+                        More</a>
+                    <a href="products.html"
+                        style="padding:0.875rem 2rem;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);border-radius:9999px;font-weight:600;text-decoration:none;backdrop-filter:blur(6px);">All
+                        Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Complete Solutions -->
+        <div class="slide">
+            <div class="slide-bg" style="background:linear-gradient(135deg,#0d2144 0%,#121f3e 50%,#1e2d5a 100%);">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,0.15),transparent 60%);">
+                </div>
+            </div>
+            <div class="slide-content">
+                <span class="slide-badge">🏭 40 Years of Excellence</span>
+                <div class="slide-icon">⚙️</div>
+                <h1 class="slide-title">Complete <span>Plumbing Solutions</span></h1>
+                <p class="slide-subtitle">Ball Valves · Solvents · Flexible Hoses · Sanitary Ware<br>Everything your
+                    infrastructure needs, under one brand.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="products.html"
+                        style="padding:0.875rem 2rem;background:white;color:#0c1f3f;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.2);">All
+                        Products</a>
+                    <a href="contact.html"
+                        style="padding:0.875rem 2rem;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);border-radius:9999px;font-weight:600;text-decoration:none;backdrop-filter:blur(6px);">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-arrow slider-prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="slider-arrow slider-next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="slider-nav">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
+            <button class="slider-dot" aria-label="Slide 4"></button>
+            <button class="slider-dot" aria-label="Slide 5"></button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </header>
+
+    <!-- ============================
+     STATS SECTION
+     ============================ -->
+    <section id="stats-section" style="padding:4rem 1.5rem;background:white;">
+        <div
+            style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+            <div class="stat-card reveal">
+                <div class="stat-number" data-count="40" data-suffix="+">0+</div>
+                <p style="color:#6b7280;font-weight:500;">Years of Excellence</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-1">
+                <div class="stat-number" data-count="200" data-suffix="+">0+</div>
+                <p style="color:#6b7280;font-weight:500;">PVC Fitting Variants</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+                <div class="stat-number">ISO</div>
+                <p style="color:#6b7280;font-weight:500;">9001:2015 Certified</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+                <div class="stat-number">ISI</div>
+                <p style="color:#6b7280;font-weight:500;">Mark Certified</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+                <div class="stat-number">100%</div>
+                <p style="color:#6b7280;font-weight:500;">Lead-Free & Food-Grade</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+     WHY LEOPLAST SECTION
+     ============================ -->
+    <section class="why-section" style="padding:5rem 1.5rem;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+
+                <!-- Left: Content -->
+                <div class="reveal">
+                    <div class="section-badge">Why Choose Us</div>
+                    <h2
+                        style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0c1f3f;line-height:1.2;margin-bottom:1.25rem;">
+                        Why <span class="gradient-text-blue">Leoplast?</span>
+                    </h2>
+                    <p style="color:#4b5563;line-height:1.8;margin-bottom:1.75rem;">
+                        Leo Plast has earned its reputation as a trusted name in the plumbing industry,
+                        offering a wide range of fittings, pipes, water tanks, and valves. From PVC, uPVC,
+                        and cPVC pipes to HDPE pipes, water tanks, and valves — delivering versatile solutions
+                        for residential, commercial, and agricultural applications.
+                    </p>
+                    <p style="color:#4b5563;line-height:1.8;margin-bottom:2rem;">
+                        With nearly <strong style="color:#0c1f3f;">four decades of experience</strong>, Leo Plast has
+                        consistently led the way in
+                        plumbing innovation across Tamil Nadu and beyond.
+                    </p>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
+                        <div class="why-feature-card reveal reveal-delay-1">
+                            <div class="why-icon">✅</div>
+                            <div>
+                                <h4 style="font-weight:700;color:#0c1f3f;margin-bottom:0.25rem;font-size:0.95rem;">
+                                    Food-Grade Material</h4>
+                                <p style="font-size:0.8rem;color:#6b7280;">100% lead-free, safe for drinking water</p>
+                            </div>
+                        </div>
+                        <div class="why-feature-card reveal reveal-delay-2">
+                            <div class="why-icon">🏆</div>
+                            <div>
+                                <h4 style="font-weight:700;color:#0c1f3f;margin-bottom:0.25rem;font-size:0.95rem;">ISI +
+                                    ISO Certified</h4>
+                                <p style="font-size:0.8rem;color:#6b7280;">Multiple certifications, highest standards
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-feature-card reveal reveal-delay-3">
+                            <div class="why-icon">🏭</div>
+                            <div>
+                                <h4 style="font-weight:700;color:#0c1f3f;margin-bottom:0.25rem;font-size:0.95rem;">Made
+                                    in Tamil Nadu</h4>
+                                <p style="font-size:0.8rem;color:#6b7280;">Only local manufacturer with 200+ fittings
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-feature-card reveal reveal-delay-4">
+                            <div class="why-icon">⚙️</div>
+                            <div>
+                                <h4 style="font-weight:700;color:#0c1f3f;margin-bottom:0.25rem;font-size:0.95rem;">40
+                                    Years Innovation</h4>
+                                <p style="font-size:0.8rem;color:#6b7280;">Pioneer in precision plumbing engineering</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="products.html"
+                        style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 2rem;background:linear-gradient(135deg,#1e4d8c,#0c1f3f);color:white;border-radius:9999px;font-weight:700;text-decoration:none;transition:all 0.3s;box-shadow:0 8px 25px rgba(12,31,63,0.2);">
+                        Explore All Products <span>→</span>
+                    </a>
+                </div>
+
+                <!-- Right: Video -->
+                <div class="reveal reveal-delay-2">
+                    <div class="video-container">
+                        <div class="video-thumbnail" id="video-thumb">
+                            <div
+                                style="position:absolute;inset:0;background:linear-gradient(135deg,#0c1f3f 0%,#1a3a6e 100%);">
+                            </div>
+                            <div style="position:absolute;inset:0;">
+                                <div
+                                    style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:1.5rem;position:relative;z-index:2;">
+                                    <div style="font-size:3rem;filter:drop-shadow(0 0 20px rgba(37,99,235,0.5));">🎬
+                                    </div>
+                                    <button class="video-play-btn" id="play-btn" aria-label="Play video"></button>
+                                    <p
+                                        style="color:rgba(219,234,254,0.8);font-size:0.9rem;font-weight:500;letter-spacing:0.05em;">
+                                        Watch our Story</p>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe id="video-iframe" class="video-iframe"
+                            data-src="https://www.youtube.com/embed/o3dC_G1O6iA?autoplay=1"
+                            allow="autoplay; encrypted-media" allowfullscreen title="Leoplast Company Video"></iframe>
+                        <!-- Overlay Info -->
+                        <div
+                            style="background:linear-gradient(135deg,#0c1f3f,#0f2a55);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <p style="color:white;font-weight:700;font-size:0.95rem;margin-bottom:0.2rem;">Leoplast
+                                    Industries</p>
+                                <p style="color:#7eb3f5;font-size:0.8rem;">40 Years of Quality Manufacturing</p>
+                            </div>
+                            <div style="display:flex;gap:1rem;">
+                                <div style="text-align:center;">
+                                    <p style="color:white;font-weight:800;font-size:1.2rem;">40+</p>
+                                    <p style="color:#7eb3f5;font-size:0.7rem;">Years</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <p style="color:white;font-weight:800;font-size:1.2rem;">200+</p>
+                                    <p style="color:#7eb3f5;font-size:0.7rem;">Products</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+     PRODUCTS SECTION (12 Cards)
+     ============================ -->
+    <section id="products" style="padding:5rem 1.5rem;background:#f8faff;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="text-align:center;margin-bottom:3.5rem;" class="reveal">
+                <div class="section-badge">Our Range</div>
+                <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0c1f3f;margin-bottom:0.75rem;">Core
+                    Products</h2>
+                <div
+                    style="width:60px;height:4px;background:linear-gradient(90deg,#1e4d8c,#7eb3f5);border-radius:9999px;margin:0 auto 1rem;">
+                </div>
+                <p style="color:#6b7280;max-width:550px;margin:0 auto;">India-certified, food-grade polymer solutions
+                    for every plumbing and infrastructure need.</p>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;">
+
+                <!-- 1. Bath Fittings -->
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-card-img">🚿</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Bath Fittings</h3>
+                        <p class="product-card-desc">M-Series & Edge Series — pillar cocks, angle cocks, health faucets,
+                            shower sets & more.</p>
+                        <a href="bath-fittings.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 2. Water Storage Tanks -->
+                <div class="product-card reveal reveal-delay-2">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🛢️</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Water Storage Tanks</h3>
+                        <p class="product-card-desc">Anti-bacterial layers, threaded lid, Roto & Blow moulded. 200,000+
+                            produced annually.</p>
+                        <a href="water-storage-tanks.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 3. rPVC Pipes -->
+                <div class="product-card reveal reveal-delay-3">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);">🔵</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">rPVC Pipes & Irrigation</h3>
+                        <p class="product-card-desc">ISI-certified lead-free pipes for agricultural irrigation, potable
+                            water & rainwater harvesting.</p>
+                        <a href="rpvc-pipes.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 4. PVC Fittings -->
+                <div class="product-card reveal reveal-delay-4">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#dbeafe,#eff6ff);">🔩</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">PVC Fittings</h3>
+                        <p class="product-card-desc">200+ fittings — only manufacturer in Tamil Nadu. Food-grade, ISI
+                            certified, UV resistant.</p>
+                        <a href="pvc-fittings.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 5. cPVC System -->
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">🌡️</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">cPVC Plumbing Systems</h3>
+                        <p class="product-card-desc">Hot & cold water up to 93°C. NSF-certified, lead-free,
+                            anti-scaling, ISI approved.</p>
+                        <a href="cpvc-system.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 6. uPVC System -->
+                <div class="product-card reveal reveal-delay-2">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">💧</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">uPVC Plumbing Systems</h3>
+                        <p class="product-card-desc">Safe for drinking water, lead-free, lightweight, easy install.
+                            Ideal for residential & commercial.</p>
+                        <a href="upvc-system.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 7. HDPE Irrigation -->
+                <div class="product-card reveal reveal-delay-3">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0);">🌿</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">HDPE Irrigation Systems</h3>
+                        <p class="product-card-desc">PE 63 & PE 80 grade, IS 4984:2016. Flexible, chemical-resistant,
+                            eco-friendly agriculture pipes.</p>
+                        <a href="hdpe-system.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 8. Solvents -->
+                <div class="product-card reveal reveal-delay-4">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">🧪</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Solvents</h3>
+                        <p class="product-card-desc">PVC, uPVC & cPVC solvents — premium bonding solutions for all pipe
+                            joint applications.</p>
+                        <a href="solvents.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 9. Flexible Hoses -->
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);">🌀</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Flexible Hoses</h3>
+                        <p class="product-card-desc">Suction & braided hoses for versatile fluid transfer. High-pressure
+                            rated, kink-resistant.</p>
+                        <a href="flexible-hoses.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 10. Ball Valves -->
+                <div class="product-card reveal reveal-delay-2">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#fee2e2,#fecaca);">🔴</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Ball Valves</h3>
+                        <p class="product-card-desc">PVC, uPVC, cPVC & rPVC ball valves. Full-bore, quarter-turn
+                            operation, chemical resistant.</p>
+                        <a href="ball-valves.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 11. Sanitary Ware -->
+                <div class="product-card reveal reveal-delay-3">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);">🚽</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Sanitary Ware</h3>
+                        <p class="product-card-desc">Classic flush tanks and seat covers — durable polymer construction
+                            for long-term reliability.</p>
+                        <a href="sanitary-ware.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- 12. Manhole Covers -->
+                <div class="product-card reveal reveal-delay-4">
+                    <div class="product-card-img" style="background:linear-gradient(135deg,#f1f5f9,#e2e8f0);">⬛</div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Manhole Covers</h3>
+                        <p class="product-card-desc">FRP 24×24 manhole covers in grey & white. Corrosion-proof,
+                            lightweight, heavy load-bearing.</p>
+                        <a href="manhole-covers.html" class="product-card-link">View Details →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align:center;margin-top:3rem;" class="reveal">
+                <a href="products.html"
+                    style="display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2.5rem;background:linear-gradient(135deg,#1e4d8c,#0c1f3f);color:white;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(12,31,63,0.2);transition:all 0.3s;">
+                    View Full Product Catalog →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+     ROOFING SECTION
+     ============================ -->
+    <section id="roofing"
+        style="padding:5rem 1.5rem;background:linear-gradient(135deg,#7f1d1d 0%,#991b1b 50%,#450a0a 100%);position:relative;overflow:hidden;">
+        <div
+            style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(220,38,38,0.2),transparent 60%);">
+        </div>
+        <div
+            style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1;">
+            <div class="reveal">
+                <div class="section-badge red">Leoplast Roofings</div>
+                <h2
+                    style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:white;line-height:1.2;margin-bottom:1.25rem;">
+                    The Future of <span class="gradient-text-red">Industrial Roofing</span>
+                </h2>
+                <p style="color:rgba(254,226,226,0.85);line-height:1.8;margin-bottom:2rem;">
+                    Engineered for extreme durability and heat resistance. Our premium roofing sheets offer
+                    superior protection against the harshest elements, ensuring your infrastructure stands the test of
+                    time.
+                </p>
+                <ul style="list-style:none;padding:0;margin-bottom:2rem;display:flex;flex-direction:column;gap:1rem;">
+                    <li style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.9);">
+                        <span
+                            style="width:24px;height:24px;background:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;">✓</span>
+                        UV Resistant Coating for long-lasting performance
+                    </li>
+                    <li style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.9);">
+                        <span
+                            style="width:24px;height:24px;background:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;">✓</span>
+                        High Impact Strength against extreme weather
+                    </li>
+                    <li style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.9);">
+                        <span
+                            style="width:24px;height:24px;background:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;">✓</span>
+                        Thermal Insulation keeps interiors comfortable
+                    </li>
+                </ul>
+                <a href="roofing.html"
+                    style="display:inline-block;padding:0.875rem 2.25rem;background:white;color:#7f1d1d;border-radius:9999px;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.3);transition:all 0.3s;">
+                    Discover Roofing Series →
+                </a>
+            </div>
+            <div class="reveal reveal-delay-2">
+                <div class="roofing-card">
+                    <div
+                        style="height:260px;background:linear-gradient(135deg,#1a0a0a,#2d0c0c);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:5rem;position:relative;overflow:hidden;">
+                        <span style="filter:drop-shadow(0 0 20px rgba(239,68,68,0.5));">🏗️</span>
+                        <div
+                            style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(252,165,165,0.7);">
+                            Premium Grade</div>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <div>
+                            <h4 style="font-size:1.25rem;font-weight:700;color:white;margin-bottom:0.25rem;">UltraShield
+                                Series</h4>
+                            <p style="color:#fca5a5;font-size:0.875rem;">Next-gen polymer roofing</p>
+                        </div>
+                        <a href="roofing.html"
+                            style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:1.1rem;transition:all 0.3s;">↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+     FOOTER
+     ============================ -->
+    <footer style="background:#111827;color:#9ca3af;padding:4rem 1.5rem 2rem;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
+                <div>
+                    <img src="assets/logo.webp" alt="Leoplast" style="width:140px;margin-bottom:1.25rem;">
+                    <p style="max-width:320px;line-height:1.7;font-size:0.9rem;margin-bottom:1.5rem;">
+                        Setting new standards in polymer manufacturing and plumbing solutions. Committed to quality,
+                        safety, and innovation since 1985.
+                    </p>
+                    <div style="display:flex;gap:0.75rem;">
+                        <a href="#"
+                            style="width:38px;height:38px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;font-size:0.9rem;"
+                            onmouseover="this.style.background='#1e4d8c';this.style.color='white'"
+                            onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'">f</a>
+                        <a href="#"
+                            style="width:38px;height:38px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;font-size:0.9rem;"
+                            onmouseover="this.style.background='#1e4d8c';this.style.color='white'"
+                            onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'">in</a>
+                        <a href="#"
+                            style="width:38px;height:38px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;font-size:0.9rem;"
+                            onmouseover="this.style.background='#1e4d8c';this.style.color='white'"
+                            onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'">📷</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color:white;font-weight:700;margin-bottom:1.25rem;">Products</h4>
+                    <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li><a href="water-storage-tanks.html" class="footer-link">Water Tanks</a></li>
+                        <li><a href="pvc-fittings.html" class="footer-link">PVC Fittings</a></li>
+                        <li><a href="cpvc-system.html" class="footer-link">cPVC System</a></li>
+                        <li><a href="upvc-system.html" class="footer-link">uPVC System</a></li>
+                        <li><a href="hdpe-system.html" class="footer-link">HDPE Pipes</a></li>
+                        <li><a href="bath-fittings.html" class="footer-link">Bath Fittings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color:white;font-weight:700;margin-bottom:1.25rem;">More Products</h4>
+                    <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li><a href="ball-valves.html" class="footer-link">Ball Valves</a></li>
+                        <li><a href="solvents.html" class="footer-link">Solvents</a></li>
+                        <li><a href="flexible-hoses.html" class="footer-link">Flexible Hoses</a></li>
+                        <li><a href="sanitary-ware.html" class="footer-link">Sanitary Ware</a></li>
+                        <li><a href="manhole-covers.html" class="footer-link">Manhole Covers</a></li>
+                        <li><a href="roofing.html" class="footer-link">Roofing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color:white;font-weight:700;margin-bottom:1.25rem;">Contact</h4>
+                    <ul
+                        style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;">
+                        <li style="display:flex;gap:0.5rem;align-items:flex-start;">
+                            <span>📍</span>
+                            <span>Sanniyasigundu Rd, Salem, Tamil Nadu 636015</span>
+                        </li>
+                        <li><a href="tel:+917845801233" style="color:#9ca3af;text-decoration:none;">📞 +91 78458
+                                01233</a></li>
+                        <li><a href="mailto:leoplastpipes@gmail.com"
+                                style="color:#9ca3af;text-decoration:none;word-break:break-all;">✉️
+                                leoplastpipes@gmail.com</a></li>
+                        <li>🕐 10:00 AM – 7:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                style="border-top:1px solid #1f2937;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;">
+                <p>© 2026 Leoplast Industries. All rights reserved.</p>
+                <div style="display:flex;gap:1.5rem;">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./leoplast.js"></script>
+
+    <style>
+        @media(max-width:768px) {
+            .desktop-nav {
+                display: none !important;
+            }
+
+            #menu-btn {
+                display: flex !important;
+            }
+
+            section>div>div[style*="grid-template-columns:1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            footer>div>div[style*="grid-template-columns:2fr"] {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media(max-width:480px) {
+            footer>div>div[style*="grid-template-columns:2fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
