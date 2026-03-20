@@ -238,8 +238,13 @@
   transition: width 0.25s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active-page::after {
   width: 100%;
+}
+
+.nav-link.active-page.roofing-active::after {
+  background: #dc2626;
 }
 
 .mobile-menu {
@@ -269,8 +274,13 @@
   padding: 0.5rem 1rem;
 }
 
-.mobile-menu .nav-link:hover {
+.mobile-menu .nav-link:hover,
+.mobile-menu .nav-link.active-page {
   color: #7eb3f5;
+}
+
+.mobile-menu .nav-link.active-page.roofing-active {
+  color: #dc2626;
 }
 
 .mobile-menu-close {
@@ -641,14 +651,16 @@
   margin-left: 4px;
 }
 
-iframe.video-iframe {
+.video-iframe {
   width: 100%;
   aspect-ratio: 16/9;
   border: none;
   display: none;
+  object-fit: contain;
+  background: #000;
 }
 
-iframe.video-iframe.active {
+.video-iframe.active {
   display: block;
 }
 

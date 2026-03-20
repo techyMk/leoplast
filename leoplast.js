@@ -10,8 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoPlayer();
     initSlider();
     initCounters();
+    initActiveLinks();
     lucide.createIcons();
 });
+
+// ========================
+// ACTIVE LINK HANDLER
+// ========================
+function initActiveLinks() {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '') currentPath = 'index.html';
+
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            // Add active state class for CSS styling
+            link.classList.add('active-page');
+            if (currentPath === 'roofing.html') {
+                link.classList.add('roofing-active');
+            }
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+}
 
 // ========================
 // LOADER
@@ -147,7 +171,12 @@ function initVideoPlayer() {
     const activate = () => {
         thumb.classList.add('hidden');
         iframe.classList.add('active');
-        iframe.src = iframe.dataset.src;
+        iframe.style.display = 'block';
+        if (iframe.tagName.toLowerCase() === 'video') {
+            iframe.play();
+        } else if (iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+        }
     };
     thumb.addEventListener('click', activate);
     playBtn?.addEventListener('click', activate);
