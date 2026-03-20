@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
     <link href="./leoplast.css" rel="stylesheet">
+    <link rel="icon" href="assets/video-logo.svg">
 </head>
 
 <body style="font-family:'Outfit',sans-serif;background:#f9fafb;color:#111827;overflow-x:hidden;">
@@ -34,7 +35,7 @@
         <img src="assets/logo-dark.webp" alt="Leoplast" class="nav-logo logo-dark">
     </a>
         <div style="display:flex;gap:2rem;" class="desktop-nav">
-            <a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link">Products</a><a
+            <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="products.html" class="nav-link">Products</a><a
                 href="roofing.html" class="nav-link">Roofing</a><a href="contact.html" class="nav-link">Contact</a>
         </div>
         
@@ -42,6 +43,7 @@
     </nav>
     <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
     <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
     <a href="products.html" class="nav-link">Products</a>
     <a href="roofing.html" class="nav-link">Roofing</a>
     <a href="contact.html" class="nav-link">Contact</a>
@@ -56,7 +58,7 @@
             <div class="breadcrumb" style="margin-bottom:1rem;"><a href="index.html">Home</a> <span>›</span> <a
                     href="products.html">Products</a> <span>›</span> <span style="color:white;">Water Storage
                     Tanks</span></div>
-            <div style="font-size:3.5rem;margin-bottom:1rem;">🛢️</div>
+
             <h1 class="page-hero-title">Water Storage <span>Tanks</span></h1>
             <p style="color:rgba(219,234,254,0.8);font-size:1rem;max-width:480px;margin:0 auto;">Advanced engineering ·
                 Anti-bacterial protection · Hygienic water storage</p>
@@ -82,8 +84,10 @@
                         varying climates and ensure the safety and purity of stored water.</p>
                 </div>
                 <div class="reveal reveal-delay-2"
-                    style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);border-radius:1.5rem;display:flex;align-items:center;justify-content:center;min-height:280px;font-size:6rem;">
-                    🛢️</div>
+                    style="background:linear-gradient(135deg,#dbeafe,#eff6ff);border-radius:1.5rem;overflow:hidden;min-height:320px;display:flex;align-items:center;justify-content:center;">
+                    <img src="assets/products/Tank.png" alt="Leo Plast Water Storage Tank"
+                        style="max-width:100%;max-height:340px;object-fit:contain;padding:1rem;">
+                </div>
             </div>
 
             <!-- Key Features -->
@@ -131,6 +135,32 @@
                         <h4 style="font-weight:700;color:#0c1f3f;margin-bottom:0.4rem;">Consistent Wall Thickness</h4>
                         <p style="font-size:0.875rem;color:#6b7280;line-height:1.6;">Virtually stress-free corners and
                             consistent wall thickness for superior structural strength and long service life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank Type Cards -->
+            <div style="margin-bottom:4rem;" class="reveal">
+                <h2 style="font-size:1.75rem;font-weight:800;color:#0c1f3f;margin-bottom:0.5rem;text-align:center;">Our Tanks</h2>
+                <p style="color:#6b7280;text-align:center;margin-bottom:2rem;">Choose from Roto Moulded (White, Gold, Yellow) or Blow Moulded (White, Yellow) variants.</p>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:700px;margin:0 auto;">
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-card-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);height:260px;">
+                            <img src="assets/products/water-tanks/water-tank.webp" alt="Blow Mould Tank" style="max-height:220px;width:auto;object-fit:contain;">
+                        </div>
+                        <div class="product-card-body" style="padding:1.5rem;text-align:center;">
+                            <h3 class="product-card-title" style="margin-bottom:0.5rem;">Blow Mould Tank</h3>
+                            <p style="color:#6b7280;font-size:0.875rem;">Available in White &amp; Yellow · 200,000+ manufactured annually · Unique stress-free corner design</p>
+                        </div>
+                    </div>
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a);height:260px;">
+                            <img src="assets/products/water-tanks/roto-moulded-water-tank.webp" alt="Roto Mould Tank" style="max-height:220px;width:auto;object-fit:contain;">
+                        </div>
+                        <div class="product-card-body" style="padding:1.5rem;text-align:center;">
+                            <h3 class="product-card-title" style="margin-bottom:0.5rem;">Roto Mould Tank</h3>
+                            <p style="color:#6b7280;font-size:0.875rem;">Available in White, Gold &amp; Yellow · Advanced roto-moulding technology · Multi-layer protection</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,7 +216,7 @@
         <img src="assets/logo.webp" alt="Leoplast" style="width:100px;margin:0 auto 0.75rem;">
         <p>© 2026 Leoplast Industries. All rights reserved.</p>
         <div style="display:flex;justify-content:center;gap:2rem;margin-top:0.75rem;flex-wrap:wrap;">
-            <a href="index.html" class="footer-link">Home</a><a href="products.html" class="footer-link">Products</a><a
+            <a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About</a><a href="products.html" class="footer-link">Products</a><a
                 href="roofing.html" class="footer-link">Roofing</a><a href="contact.html"
                 class="footer-link">Contact</a>
         </div>
@@ -223,6 +253,7 @@
             </a>
         </div>
     </footer>
+    <link rel="icon" href="assets/video-logo.svg">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./leoplast.js"></script>
     <style>
