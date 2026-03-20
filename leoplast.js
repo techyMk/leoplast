@@ -11,8 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider();
     initCounters();
     initActiveLinks();
+    initMoveToTop();
     lucide.createIcons();
 });
+
+// ========================
+// MOVE TO TOP BUTTON
+// ========================
+function initMoveToTop() {
+    const btn = document.getElementById('move-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, { passive: true });
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 // ========================
 // ACTIVE LINK HANDLER

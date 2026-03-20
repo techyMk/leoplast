@@ -506,6 +506,43 @@
   text-transform: uppercase;
 }
 
+/* =============================================
+   MOVE TO TOP BUTTON
+   ============================================= */
+.move-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-800));
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+.move-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.move-to-top-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #1e4d8c, #0c1f3f);
+}
+
 .scroll-line {
   width: 1px;
   height: 40px;
