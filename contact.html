@@ -101,6 +101,28 @@
                 grid-template-columns: 1fr !important;
             }
         }
+    
+        /* Map Card Responsive */
+        @media (max-width: 768px) {
+            .map-card {
+                position: relative !important;
+                top: 0 !important;
+                left: 0 !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .map-container {
+                height: 600px !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .map-iframe-wrapper {
+                flex: 1 !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -377,7 +399,7 @@
 
             <!-- ===== MAP ===== -->
             <div class="reveal"
-                style="border-radius:1.5rem;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.1);border:1px solid rgba(37,99,235,0.08);">
+                style="border-radius:1.5rem;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.1);border:1px solid rgba(37,99,235,0.08);margin-top:2rem;">
                 <div
                     style="background:linear-gradient(135deg,#0c1f3f,#1e4d8c);padding:1.25rem 2rem;display:flex;gap:1.5rem;align-items:center;">
                     <i data-lucide="map-pin" style="width:2rem;height:2rem;color:#7eb3f5;flex-shrink:0;"></i>
@@ -388,8 +410,8 @@
                     </div>
                 </div>
                 <iframe
-                    src="https://www.google.com/maps?cid=8383691654192911045&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAEYASAB&hl=en&gl=IN&source=embed"
-                    width="100%" height="380" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+                    src="https://maps.google.com/maps?q=Leo+Plast+Pipes+and+Fittings,+Sanniyasigundu+Rd,+Salem,+Tamil+Nadu+636015&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="450" style="border:0;display:block;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" title="Leoplast Location">
                 </iframe>
             </div>
