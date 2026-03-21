@@ -1,60 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+import re
+import sys
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leoplast Roofings | Premium Industrial Roofing Solutions</title>
-    <meta name="description"
-        content="Leoplast Roofings — UltraShield series. UV resistant, high impact strength, thermal insulation roofing sheets for industrial, commercial, and residential use.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet">
-    <link href="./leoplast.css" rel="stylesheet">
-    <link rel="icon" href="assets/video-logo.svg">
-</head>
+file_path = "c:/Users/shoba/OneDrive/Documents/leoplast-web-redesign/roofing.html"
+with open(file_path, "r", encoding="utf-8") as f:
+    c = f.read()
 
-<body style="font-family:'Outfit',sans-serif;background:#f9fafb;color:#111827;overflow-x:hidden;">
+start_marker = "<!-- Hero — Red Theme -->"
+end_marker = "<footer style=\"background:#111827"
 
-    <div id="loader" style="background:#f8faff; z-index: 99999; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; position: fixed; inset: 0;">
-    <div class="loader-scene">
-        <div class="circle-lines out"></div>
-        <div class="circle-lines in"></div>
-        <img src="assets/logo.webp" class="loader-logo" alt="Leoplast">
-    </div>
-    <div class="dot-loader">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-</div>
+if start_marker not in c or end_marker not in c:
+    print("Markers not found.")
+    sys.exit()
 
-    <nav id="navbar"
-        style="position:fixed;top:0;width:100%;z-index:1000;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;color:white;">
-        <a href="index.html" class="nav-brand">
-        <img src="assets/logo-light.webp" alt="Leoplast" class="nav-logo logo-light">
-        <img src="assets/logo-dark.webp" alt="Leoplast" class="nav-logo logo-dark">
-    </a>
-        <div style="display:flex;gap:2rem;" class="desktop-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="products.html" class="nav-link">Products</a>
-            <a href="roofing.html" class="nav-link" style="color:#fca5a5;">Roofing</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        
-            <button id="menu-btn" class="nav-mobile-btn" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    </nav>
-    <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="products.html" class="nav-link">Products</a>
-    <a href="roofing.html" class="nav-link">Roofing</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    
-</div>
+start_idx = c.find(start_marker)
+end_idx = c.find(end_marker)
 
-    <!-- Hero — Red Theme -->
+new_content = """<!-- Hero — Red Theme -->
     <div class="page-hero roofing-hero" style="padding:9rem 1.5rem 6rem;">
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(220,38,38,0.2),transparent 65%);"></div>
         <div style="position:relative;z-index:2;text-align:center;">
@@ -96,36 +57,22 @@
             </div>
 
             <!-- 3-Layer Tech -->
-            <div id="layer-container" style="background:linear-gradient(135deg,#f8faff,#eef4ff);border-radius:2rem;padding:4rem 2rem 5rem;text-align:center;box-shadow:0 10px 40px rgba(30,58,110,0.05);" class="reveal reveal-delay-2 layer-reveal-container">
-                <style>
-                    /* Premium interactive layout unfold animation */
-                    #layer-container .layer-stack { transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s ease, box-shadow 0.3s; will-change: transform, opacity; }
-                    /* Start positions (compressed) */
-                    #layer-container:not(.visible) .l2 { transform: translateY(-70px); opacity:0; }
-                    #layer-container:not(.visible) .l3 { transform: translateY(-130px); opacity:0; }
-                    /* End positions (Expanded cascading down) */
-                    #layer-container.visible .l2 { transform: translateY(0); opacity:1; transition-delay:0.25s; }
-                    #layer-container.visible .l3 { transform: translateY(0); opacity:1; transition-delay:0.5s; }
-                    
-                    /* Hover pop out interactivity */
-                    #layer-container .layer-stack:hover { transform: translateY(-12px) scale(1.02) !important; box-shadow:0 25px 50px rgba(0,0,0,0.2) !important; z-index:10 !important; cursor:pointer;}
-                </style>
-
+            <div style="background:linear-gradient(135deg,#f8faff,#eef4ff);border-radius:2rem;padding:4rem 2rem 5rem;text-align:center;box-shadow:0 10px 40px rgba(30,58,110,0.05);" class="reveal reveal-delay-2">
                 <h3 style="font-size:2rem;font-weight:800;color:#0c1f3f;margin-bottom:0.5rem;text-transform:uppercase;">Leo Plast 3-Layer ASA uPVC Sheets</h3>
-                <p style="color:#1a56db;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6rem;">Interactive Layer Explanation</p>
+                <p style="color:#1a56db;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5rem;">Layer Explanation</p>
                 
-                <div style="display:flex;flex-direction:column;align-items:center;max-width:700px;margin:0 auto;perspective:1000px;">
-                    <div class="layer-stack l1" style="width:100%;min-height:90px;background:#dc2626;padding:1.5rem;border-radius:1.5rem;color:white;box-shadow:0 10px 20px rgba(220,38,38,0.25);position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;">
+                <div style="display:flex;flex-direction:column;align-items:center;max-width:700px;margin:0 auto;">
+                    <div style="width:100%;min-height:90px;background:#dc2626;padding:1.5rem;border-radius:1.5rem;color:white;box-shadow:0 10px 20px rgba(220,38,38,0.25);position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;">
                         <h4 style="font-size:1.25rem;font-weight:800;margin:0;letter-spacing:0.05em;">LAYER-1:</h4>
                         <p style="margin:0.25rem 0 0;font-size:1rem;font-weight:600;">ASA - High Weather Resistance & Anti-aging Protection</p>
                     </div>
 
-                    <div class="layer-stack l2" style="width:90%;min-height:90px;background:#991b1b;padding:1.5rem;border-radius:0 0 1.5rem 1.5rem;color:white;box-shadow:0 8px 15px rgba(0,0,0,0.15);position:relative;z-index:2;margin-top:-1.5rem;padding-top:2.5rem;display:flex;flex-direction:column;justify-content:center;">
+                    <div style="width:90%;min-height:90px;background:#991b1b;padding:1.5rem;border-radius:0 0 1.5rem 1.5rem;color:white;box-shadow:0 8px 15px rgba(0,0,0,0.15);position:relative;z-index:2;margin-top:-1.5rem;padding-top:2.5rem;display:flex;flex-direction:column;justify-content:center;">
                         <h4 style="font-size:1.15rem;font-weight:800;margin:0;letter-spacing:0.05em;">LAYER-2:</h4>
-                        <p style="margin:0.25rem 0 0;font-size:0.95rem;font-weight:600;">Reinforced & Sunlight Insulation Layer</p>
+                        <p style="margin:0.25rem 0 0;font-size:0.95rem;font-weight:600;">Reinforced & Sun light insulation Layer</p>
                     </div>
 
-                    <div class="layer-stack l3" style="width:80%;min-height:90px;background:white;border:2px solid #e5e7eb;padding:1.5rem;border-radius:0 0 1.5rem 1.5rem;color:#0c1f3f;box-shadow:0 4px 10px rgba(0,0,0,0.05);position:relative;z-index:1;margin-top:-1.5rem;padding-top:2.5rem;display:flex;flex-direction:column;justify-content:center;">
+                    <div style="width:80%;min-height:90px;background:white;border:2px solid #e5e7eb;padding:1.5rem;border-radius:0 0 1.5rem 1.5rem;color:#0c1f3f;box-shadow:0 4px 10px rgba(0,0,0,0.05);position:relative;z-index:1;margin-top:-1.5rem;padding-top:2.5rem;display:flex;flex-direction:column;justify-content:center;">
                         <h4 style="font-size:1.15rem;font-weight:800;margin:0;letter-spacing:0.05em;color:#1e3a6e;">LAYER-3:</h4>
                         <p style="margin:0.25rem 0 0;font-size:0.95rem;font-weight:600;color:#4b5563;">White Colored - High Strength & Rigidity Layer</p>
                     </div>
@@ -332,130 +279,7 @@
             </div>
         </div>
         
-        <!-- Installation Process -->
-    <section style="padding:4rem 2rem 2rem;background:#fafafa;">
-        <div style="max-width:1100px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:4rem;" class="reveal">
-                <div class="section-badge red">Process</div>
-                <h2 style="font-size:2.5rem;font-weight:800;color:#0c1f3f;text-transform:uppercase;">Installation Process</h2>
-            </div>
-            
-            <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center;">
-                <!-- Left: Image & Note -->
-                <div class="reveal">
-                    <div style="background:white;padding:1.5rem;border-radius:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,0.06);margin-bottom:2.5rem;">
-                        <div style="width:100%;aspect-ratio:4/3;background:#f9fafb;border-radius:1rem;display:flex;align-items:center;justify-content:center;color:#9ca3af;border:2px dashed #e5e7eb;">
-                            <div style="text-align:center;">
-                                <i data-lucide="image" style="width:48px;height:48px;margin:0 auto 0.5rem;color:#dc2626;"></i>
-                                <span style="font-size:0.95rem;font-weight:600;display:block;">Architecture Diagram Pending</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background:linear-gradient(135deg,#1e3a8a,#1e40af);color:white;padding:2rem 2.5rem;border-radius:1.5rem;box-shadow:0 15px 30px rgba(30,58,138,0.3);position:relative;overflow:hidden;">
-                        <!-- Background glow effect -->
-                        <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;background:rgba(255,255,255,0.1);border-radius:50%;filter:blur(20px);"></div>
-                        <h4 style="font-weight:800;font-size:1.35rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem;">
-                            <i data-lucide="info" style="width:24px;height:24px;color:#93c5fd;"></i> Note:
-                        </h4>
-                        <p style="margin:0;font-size:1.05rem;line-height:1.7;color:#dbeafe;">The purlin span is related to the workshop temperature. The higher the workshop temperature, the smaller the purlin span. Otherwise it will lead to tile deformation.</p>
-                    </div>
-                </div>
-
-                <!-- Right: Steps -->
-                <div class="reveal reveal-delay-1">
-                    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2rem;">
-                        
-                        <li style="display:flex;gap:1.5rem;align-items:flex-start;background:white;padding:1.5rem 2rem;border-radius:1.25rem;box-shadow:0 4px 15px rgba(0,0,0,0.03);border-left:4px solid #dc2626;">
-                            <div style="width:44px;height:44px;background:#fef2f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#dc2626;flex-shrink:0;">
-                                <span style="font-weight:800;font-size:1.2rem;">1</span>
-                            </div>
-                            <div>
-                                <p style="margin:0;color:#4b5563;font-size:1rem;line-height:1.7;"><strong>Purlines</strong> can be square pipe (60mmx40mmx3mm) or C-shaped steel (100mmx50mmx20 mmx3mm) or corrosion-resistant wood beam (60x40mm). The purline spacing is <strong>660mm</strong>, arranged from bottom to top.</p>
-                            </div>
-                        </li>
-
-                        <li style="display:flex;gap:1.5rem;align-items:flex-start;background:white;padding:1.5rem 2rem;border-radius:1.25rem;box-shadow:0 4px 15px rgba(0,0,0,0.03);border-left:4px solid #b91c1c;">
-                            <div style="width:44px;height:44px;background:#fef2f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#dc2626;flex-shrink:0;">
-                                <span style="font-weight:800;font-size:1.2rem;">2</span>
-                            </div>
-                            <div>
-                                <p style="margin:0;color:#4b5563;font-size:1rem;line-height:1.7;"><strong>Main tile</strong> should be installed according to local wind direction, to be opposite to wind direction. Lap with a tile wave, with both sides done at the same time. When installing main ridge tiles, please cut out a section of the first tile before installing.</p>
-                            </div>
-                        </li>
-
-                        <li style="display:flex;gap:1.5rem;align-items:flex-start;background:white;padding:1.5rem 2rem;border-radius:1.25rem;box-shadow:0 4px 15px rgba(0,0,0,0.03);border-left:4px solid #991b1b;">
-                            <div style="width:44px;height:44px;background:#fef2f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#dc2626;flex-shrink:0;">
-                                <span style="font-weight:800;font-size:1.2rem;">3</span>
-                            </div>
-                            <div>
-                                <p style="margin:0;color:#4b5563;font-size:1rem;line-height:1.7;">The lap joints of the main ridge tiles and the slope ridge tiles should be neatened. Install the tee-joint tiles after completion of installation of the main ridge tiles and the slope ridge tiles.</p>
-                            </div>
-                        </li>
-
-                        <li style="display:flex;gap:1.5rem;align-items:flex-start;background:white;padding:1.5rem 2rem;border-radius:1.25rem;box-shadow:0 4px 15px rgba(0,0,0,0.03);border-left:4px solid #7f1d1d;">
-                            <div style="width:44px;height:44px;background:#fef2f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#dc2626;flex-shrink:0;">
-                                <span style="font-weight:800;font-size:1.2rem;">4</span>
-                            </div>
-                            <div>
-                                <p style="margin:0;color:#4b5563;font-size:1rem;line-height:1.7;"><strong>Fixing parts</strong> are special parts. When fixing, first use electric drill to make holes and keep the hole diameter 2mm bigger than screw. Tapping screws with diameter of 6.3mm are recommended.</p>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Applications -->
-    <section style="padding:6rem 2rem;background:white;">
-        <div style="max-width:1100px;margin:0 auto;" class="reveal">
-            <div style="text-align:center;margin-bottom:4rem;">
-                <h2 style="font-size:2.5rem;font-weight:800;color:#0c1f3f;text-transform:uppercase;">Applications</h2>
-            </div>
-            
-            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:3rem;max-width:900px;margin:0 auto;">
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-1">
-                    <img src="assets/roofing/app_icon_farming.png" alt="Farming" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Farming</span>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-2">
-                    <img src="assets/roofing/app_icon_houses.png" alt="Houses" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Houses</span>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-3">
-                    <img src="assets/roofing/app_icon_car-shed.png" alt="Car-Shed" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Car-Shed</span>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-4">
-                    <img src="assets/roofing/app_icon_warehouse.png" alt="Warehouse" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Warehouse</span>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-1">
-                    <img src="assets/roofing/app_icon_factories.png" alt="Factories" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Factories</span>
-                </div>
-
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-2">
-                    <img src="assets/roofing/app_icon_wall-cladding.png" alt="Wall-Cladding" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Wall-Cladding</span>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;align-items:center;width:140px;" class="reveal reveal-delay-3">
-                    <img src="assets/roofing/app_icon_resorts.png" alt="Resorts" style="width:85px;height:75px;object-fit:contain;margin-bottom:1.25rem;transition:transform 0.35s ease;filter:drop-shadow(0 10px 15px rgba(220,38,38,0.15));" onmouseover="this.style.transform='translateY(-8px) scale(1.08)';" onmouseout="this.style.transform='translateY(0) scale(1)';">
-                    <span style="font-weight:800;color:#0c1f3f;font-size:1.15rem;">Resorts</span>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <div style="max-width:1100px;margin:6rem auto 0;" class="reveal">
+        <div style="max-width:1100px;margin:6rem auto 0;" class="reveal">
             <!-- CTA -->
             <div style="background:linear-gradient(135deg,#7f1d1d,#991b1b);border-radius:2rem;padding:4rem;text-align:center;position:relative;overflow:hidden;box-shadow:0 20px 40px rgba(127,29,29,0.3);">
                 <div style="position:absolute;top:-40px;left:-40px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.03);"></div>
@@ -468,71 +292,9 @@
             </div>
         </div>
     </section>
+"""
 
-    <footer style="background:#111827;color:#9ca3af;padding:2rem 1.5rem;text-align:center;font-size:0.85rem;">
-        <img src="assets/logo.webp" alt="Leoplast" style="width:100px;margin:0 auto 0.75rem;">
-        <p>© 2026 Leoplast Industries. All rights reserved.</p>
-        <div style="display:flex;justify-content:center;gap:2rem;margin-top:0.75rem;flex-wrap:wrap;">
-            <a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About</a><a href="products.html" class="footer-link">Products</a><a
-                href="roofing.html" class="footer-link">Roofing</a><a href="contact.html"
-                class="footer-link">Contact</a>
-        </div>
-            <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;">
-            <a href="https://www.instagram.com/leoplastindia/" target="_blank" rel="noopener noreferrer"
-                style="width:40px;height:40px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;flex-shrink:0;"
-                onmouseover="this.style.background='#e1306c';this.style.color='white'"
-                onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'" aria-label="Instagram">
-                <i data-lucide="instagram" style="width:18px;height:18px;"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/leoplastindia/" target="_blank" rel="noopener noreferrer"
-                style="width:40px;height:40px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;flex-shrink:0;"
-                onmouseover="this.style.background='#0a66c2';this.style.color='white'"
-                onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'" aria-label="LinkedIn">
-                <i data-lucide="linkedin" style="width:18px;height:18px;"></i>
-            </a>
-            <a href="https://in.pinterest.com/leoplastindia/" target="_blank" rel="noopener noreferrer"
-                style="width:40px;height:40px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;flex-shrink:0;"
-                onmouseover="this.style.background='#e60023';this.style.color='white'"
-                onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'" aria-label="Pinterest">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 20l4-9"/><path d="M10.7 14c.498 1.25 1.5 1.5 2.5 1.5 2.371 0 3.8-2.6 3.8-5 0-2.8-2.4-5.2-6-5.2-3.6 0-6 2.4-6 5.2 0 1.6.834 3 2.152 3.8"/></svg>
-            </a>
-            <a href="https://x.com/leoplastindia" target="_blank" rel="noopener noreferrer"
-                style="width:40px;height:40px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;flex-shrink:0;"
-                onmouseover="this.style.background='#000000';this.style.color='white'"
-                onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'" aria-label="X (Twitter)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.873 11.633Z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@leoplastindia" target="_blank" rel="noopener noreferrer"
-                style="width:40px;height:40px;border-radius:50%;background:#1f2937;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:all 0.3s;flex-shrink:0;"
-                onmouseover="this.style.background='#ff0000';this.style.color='white'"
-                onmouseout="this.style.background='#1f2937';this.style.color='#9ca3af'" aria-label="YouTube">
-                <i data-lucide="youtube" style="width:18px;height:18px;"></i>
-            </a>
-        </div>
-    </footer>
-    <link rel="icon" href="assets/video-logo.svg">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="./leoplast.js"></script>
-    <style>
-        @media(max-width:768px) {
-            .desktop-nav {
-                display: none !important;
-            }
-
-            #menu-btn {
-                display: flex !important;
-            }
-
-            section>div>div[style*="grid-template-columns:1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
-
-    <!-- Move to Top Button -->
-    <button id="move-to-top" class="move-to-top-btn" aria-label="Move to top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
-</body>
-
-</html>
+c = c[:start_idx] + new_content + "\n    " + c[end_idx:]
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(c)
+print("Updated roofing.html")
