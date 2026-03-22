@@ -1166,7 +1166,7 @@ textarea.contact-input {
   }
 
   .nav-logo {
-    width: 120px;
+    width: 100px;
     min-width: unset;
     max-width: unset;
   }
@@ -1303,3 +1303,36 @@ textarea.contact-input {
     align-items: center;
   }
 }
+
+/* =============================================
+   RESPONSIVE UTILITIES
+   ============================================= */
+@media (max-width: 768px) {
+  .stack-mobile {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  .text-center-mobile {
+    text-align: center !important;
+  }
+  .p-0-mobile {
+    padding: 0 !important;
+  }
+  .m-0-mobile {
+    margin: 0 !important;
+  }
+  .full-width-mobile {
+      width: 100% !important;
+      max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+    .container-fluid {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
