@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!document.getElementById("dev-credit")) {
             
             // IF THE URL CHANGES IN THE FUTURE, YOU CAN EDIT THIS VARIABLE RIGHT HERE:
-            const devUrl = "https://portfolio-techymk.netlify.app/";
+            const devUrl = "https://techymk.vercel.app/";
             
             const devHtml = `
             <div id="dev-credit" style="margin-top:3rem;border-top:1px solid rgba(255,255,255,0.05);padding-top:1.5rem;font-size:0.8rem;color:#6b7280;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;letter-spacing:0.02em;">

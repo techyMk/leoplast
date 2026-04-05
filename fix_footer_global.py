@@ -4,7 +4,7 @@ import os
 
 html_files = glob.glob(r"c:\Users\shoba\OneDrive\Documents\leoplast-web-redesign\*.html")
 
-devUrl = "https://portfolio-techymk.netlify.app/"
+devUrl = "https://techymk.vercel.app/"
 
 unified_footer_bottom = f"""
         <div style="margin-top:3rem;border-top:1px solid rgba(255,255,255,0.05);padding-top:1.5rem;font-size:0.85rem;color:#6b7280;display:flex;justify-content:center;align-items:center;gap:0.75rem;flex-wrap:wrap;">
